@@ -29,13 +29,15 @@ export class HomePage {
       });
   }
 
+  // Navegar a una ubicación por GOOGLE MAPS. 
+  // Esta ubicación se obtiene en base a la latitud y longitud de unas coordenadas.
   navigateLocation(){
     let options: LaunchNavigatorOptions = {
       start:[this.latitude,this.longitude],
       app: this.launchNavigator.APP.GOOGLE_MAPS
     };
 
-    this.launchNavigator.navigate('London, ON', options).then(success =>{
+    this.launchNavigator.navigate('Toronto, ON', options).then(success =>{
       console.log(success);
     },error=>{
       console.log(error);
